@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import java.net.URLDecoder;
 import java.util.ArrayList;
 
 class AdapterArticleList extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -45,7 +44,7 @@ class AdapterArticleList extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 			       .error(R.drawable.img_photo)
 			       .into(vItem.articleBanner);
 			
-			vItem.adapterTitle.setText(URLDecoder.decode(mData.getTitle()));
+			vItem.adapterTitle.setText(mData.getTitle());
 			
 			vItem.adapterSubTitle.setText(mData.getDescription());
 			

@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_article_list);
 		
 		// URL to get article JSON
-		url = "https://newsapi.org/v2/everything?q=bitcoin&from=2019-05-08&sortBy=publishedAt&apiKey=d714d4f39e444dbd8e272bb7f5926c73";
+//		url = "https://newsapi.org/v2/everything?q=bitcoin&from=2019-05-08&sortBy=publishedAt&apiKey=d714d4f39e444dbd8e272bb7f5926c73";
+		url = "https://newsapi.org/v2/everything?q=bitcoin&from=2019-05-10&sortBy=publishedAt&apiKey=1a974b67dda14d7d90b3dbcb9567ba80";
 		
 		mRecyclerView = findViewById(R.id.mRecyclerView);
 		mRecyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
@@ -111,9 +112,6 @@ public class MainActivity extends AppCompatActivity {
 			if (pDialog.isShowing()) {
 				pDialog.dismiss();
 			}
-			/**
-			 * Updating parsed JSON data into Recylerview
-			 * */
 			
 			mAdapterArticleList = new AdapterArticleList(mContext, mArticleDataList);
 			mRecyclerView.setAdapter(mAdapterArticleList);
